@@ -1,0 +1,195 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  width: 480px;
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+.closeX {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #999;
+}
+
+/* New Grid Layout */
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.fullWidth {
+  grid-column: span 3;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* Fixed Time and Read-Only Inputs */
+.input, 
+.readOnlyInput {
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  background: white;
+}
+
+.readOnlyInput {
+  background: #f5f5f5;
+  color: #555;
+  border-color: #eee;
+}
+
+.input:focus {
+  border-color: #2f80ed;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.1);
+}
+
+/* Service Search & List */
+.searchContainer {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.search {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-top: 4px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.dropdownItem {
+  padding: 10px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdownItem:hover {
+  background: #f0f7ff;
+}
+
+.servicesList {
+  background: #fafafa;
+  border-radius: 6px;
+  padding: 8px;
+  min-height: 60px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.serviceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-size: 13px;
+}
+
+.serviceActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.serviceActions button {
+  background: none;
+  border: none;
+  color: #ff4d4f;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.totalRow {
+  text-align: right;
+  margin: 16px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.totalRow span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin-left: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.save { flex: 2; background: #2f80ed; color: white; border: none; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+.cancel { flex: 1; background: white; border: 1px solid #d9d9d9; padding: 12px; border-radius: 6px; cursor: pointer; }
+.delete { flex: 1; background: #fff1f0; color: #ff4d4f; border: 1px solid #ffa39e; padding: 12px; border-radius: 6px; cursor: pointer; }
+
+.save:disabled { background: #b0d0ff; cursor: not-allowed; }

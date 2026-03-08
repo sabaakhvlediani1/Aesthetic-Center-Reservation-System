@@ -1,0 +1,74 @@
+.overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 3000;
+}
+
+.modal {
+  background: white;
+  width: 480px;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.header h3 { margin: 0; font-size: 18px; color: #444; }
+.closeBtn { background: none; border: none; font-size: 24px; color: #ccc; cursor: pointer; }
+
+.body { display: flex; flex-direction: column; gap: 16px; margin-bottom: 30px; }
+.rowGroup { display: flex; gap: 16px; }
+
+.inputGroup label { display: block; font-size: 12px; color: #aaa; margin-bottom: 6px; }
+.inputGroup input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.colorSelect { position: relative; display: flex; align-items: center; }
+.colorBox {
+  position: absolute;
+  left: 10px;
+  height: 20px;
+  width: calc(100% - 40px);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.colorSelect select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: white;
+  color: transparent; /* Hides text so only the color bar shows */
+}
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.colorSwatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.colorSwatch:hover {
+  transform: scale(1.2);
+}
+
+.footer { display: flex; gap: 12px; }
+.saveBtn { flex: 1; background: #2196f3; color: white; border: none; padding: 12px; border-radius: 8px; font-weight: 600; cursor: pointer; }
+.cancelBtn { flex: 1; background: white; color: #2196f3; border: 1px solid #eee; padding: 12px; border-radius: 8px; font-weight: 600; cursor: pointer; }
